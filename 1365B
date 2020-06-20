@@ -17,6 +17,6 @@ int main()
     cin>>k;
     while(k--)
     {
-        cout<<1;	
+     	
     }
 }

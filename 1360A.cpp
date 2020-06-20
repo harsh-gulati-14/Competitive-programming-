@@ -1,7 +1,7 @@
 #include<iostream>
-#include<map>
 #include<vector>
 #include<algorithm>
+#include<math.h>
 using namespace std;
 typedef long long int ll;
 #define vec vector<int>
@@ -17,6 +17,14 @@ int main()
     cin>>k;
     while(k--)
     {
-        cout<<1;	
+        int a,b;
+        cin>>a>>b;
+        if(min(2*a,2*b)>=max(a,b))
+        {
+            cout<<pow(min(2*a,2*b),2)<<"\n";
+        }
+        else{
+            cout<<pow(max(a,b),2)<<"\n";
+        }
     }
 }

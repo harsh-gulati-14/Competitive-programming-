@@ -1,5 +1,4 @@
-#include<iostream>
-#include<map>
+	#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -17,6 +16,14 @@ int main()
     cin>>k;
     while(k--)
     {
-        cout<<1;	
+     	ll n,m;
+        cin>>n>>m;
+        if((n*m)&1)
+        {
+            cout<<((n*m)+1)/2<<"\n";
+        }
+        else{
+            cout<<(n*m)/2<<"\n";
+        }
     }
 }

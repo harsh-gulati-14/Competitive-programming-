@@ -1,5 +1,4 @@
-#include<iostream>
-#include<map>
+	#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -17,6 +16,20 @@ int main()
     cin>>k;
     while(k--)
     {
-        cout<<1;	
+        int s=0,p;
+     	for(i=0;i<5;i++)
+        {
+            cin>>l;
+            s=s+l;
+        }
+        cin>>p;
+        s*=p;
+        if(s<=120)
+        {
+            cout<<"No"<<"\n";
+        }
+        else{
+            cout<<"Yes"<<"\n";   
+        }
     }
 }

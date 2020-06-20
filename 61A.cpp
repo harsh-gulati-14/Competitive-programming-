@@ -1,5 +1,4 @@
-#include<iostream>
-#include<map>
+	#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -14,9 +13,17 @@ int main()
     freopen("output.txt","w",stdout);
     #endif
     ll i,j,k,l;
-    cin>>k;
-    while(k--)
+    string s1,s2;
+    cin>>s1>>s2;
+    for(i=0;i<s1.length();i++)
     {
-        cout<<1;	
+        if(s1[i]!=s2[i])
+        {
+            cout<<1;
+        }
+        else{
+            cout<<0;
+        }
     }
+    
 }

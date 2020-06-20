@@ -1,5 +1,4 @@
-#include<iostream>
-#include<map>
+	#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -13,10 +12,20 @@ int main()
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-    ll i,j,k,l;
-    cin>>k;
-    while(k--)
+    ll i,j,k,l,f=0;
+    string s;
+    cin>>s;
+    for(i=0;i<s.length();i++)
     {
-        cout<<1;	
+        if(s[i]=='H' || s[i]=='Q' || s[i]=='9')
+        {
+            cout<<"YES";
+            f=1;
+            break;
+        }
+    }
+    if(f==0)
+    {
+        cout<<"NO";
     }
 }

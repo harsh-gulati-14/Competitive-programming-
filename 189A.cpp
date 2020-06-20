@@ -14,9 +14,8 @@ int main()
     freopen("output.txt","w",stdout);
     #endif
     ll i,j,k,l;
-    cin>>k;
-    while(k--)
-    {
-        cout<<1;	
-    }
+    cin>>i>>j>>k>>l;
+    ll m=min(min(k,l),j);
+    ll c=0;
+    
 }

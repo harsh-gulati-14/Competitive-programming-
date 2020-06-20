@@ -17,6 +17,22 @@ int main()
     cin>>k;
     while(k--)
     {
-        cout<<1;	
+        ll a,b,n;
+        cin>>a>>b>>n;
+        ll s=0,c=0;
+        while(s<=n)
+        {
+            c++;
+            s=a+b;
+            j=min(a,b);
+            if(a==j)
+            {
+                a=s;
+            }
+            else{
+                b=s;
+            }
+        }
+        cout<<c<<"\n";
     }
 }

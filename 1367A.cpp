@@ -17,6 +17,19 @@ int main()
     cin>>k;
     while(k--)
     {
-        cout<<1;	
+        string s;
+        cin>>s;
+        int n=s.length();
+        if(s.length()>3)
+        {
+            for(i=0;i<n-1;i+=2)
+            {
+                cout<<s[i];
+            }
+            cout<<s[n-1]<<"\n";
+        }
+        else{
+            cout<<s<<"\n";
+        }
     }
 }

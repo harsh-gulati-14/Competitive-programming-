@@ -14,9 +14,22 @@ int main()
     freopen("output.txt","w",stdout);
     #endif
     ll i,j,k,l;
-    cin>>k;
-    while(k--)
+    vector<string> v;
+    string s;
+    ll n;
+    cin>>n;
+    k=0;
+    map<string,int> m;
+    for(i=0;i<n;i++)
     {
-        cout<<1;	
+        cin>>s;
+        m[s]++;
+        if(m[s]==1)
+        {
+            cout<<"OK"<<"\n";
+        }
+        else{
+            cout<<s<<(m[s]-1)<<"\n";
+        }
     }
 }

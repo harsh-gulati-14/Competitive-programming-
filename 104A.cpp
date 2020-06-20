@@ -1,5 +1,4 @@
-#include<iostream>
-#include<map>
+	#include<iostream>
 #include<vector>
 #include<algorithm>
 using namespace std;
@@ -13,10 +12,18 @@ int main()
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-    ll i,j,k,l;
-    cin>>k;
-    while(k--)
+    ll i,j,k,l; 
+    ll n;
+    cin>>n;
+    if(n>=11&&n<20 || n==21)
     {
-        cout<<1;	
+        cout<<4;
+    }
+    else if(n==20)
+    {
+        cout<<15;
+    }
+    else{
+        cout<<0;
     }
 }
