@@ -18,6 +18,21 @@ int main()
     cin>>m;
     while(m--)
     {
-        cout<<1;
+        ll x,y,n;
+        cin>>x>>y>>n;
+        k=floor(n/x)-1;
+        l=ceil(n/x);
+        ll ans,f=0;
+        for(i=k;i<=l;i++)
+        {
+            ans=((i*x)+y);
+            if(((i*x)+y)>n)
+            {
+                break;
+            }
+            f=ans;
+        }
+        //cout<<k<<" "<<l<<"\n";
+        cout<<f<<"\n";
     }
 }
