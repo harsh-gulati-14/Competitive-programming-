@@ -14,9 +14,9 @@ int main()
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-    ll i,j,k,l,m;
-    cin>>m;
-    while(m--)
+    ll i,j,k,l,m,t;
+    cin>>t;
+    while(t--)
     {
         cout<<1;
     }
