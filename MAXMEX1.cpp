@@ -1,8 +1,9 @@
 #include<iostream>
 #include<map>
-#include<algorithm>
+#include <bits/stdc++.h>
 #include<vector>
 #include<algorithm>
+#include<math.h>
 using namespace std;
 typedef long long int ll;
 #define vec vector<int>
@@ -14,45 +15,46 @@ int main()
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-    ll i,j,k,l;
-    cin>>k;
-    while(k--)
+    ll i,j,k,l,m,t;
+    cin>>t;
+    while(t--)
     {
         ll n,m;
         cin>>n>>m;
-        ll a[n] ;
+        ll a[n];
         for(i=0;i<n;i++)
         {
             cin>>a[i];
         }
-        int cm=0;   
+        ll pmex=0;
         sort(a,a+n);
-        int j=1;
+        ll f=1;
         for(i=0;i<n;i++)
         {
-            if(a[i]>j)
+            if(a[i]>f)
             {
-                cm=j;
+                pmex=f;
                 break;
             }
             else{
-                j++;
+                f++;
             }
         }
-        if(i==n && cm==0)
+        if(i==n && pmex==0)
         {
-            cm=a[n-1]+1;
+            pmex=a[n-1]+1;
         }
-        if(cm<m)
-        {
-            cout<<-1<<"\n";
-        }
-        else if(cm==m)
+        if(pmex==m)
         {
             cout<<n<<"\n";
         }
-        else{
-            int r=0;
+        else if(pmex<m)
+        {
+            cout<<-1<<"\n";
+        }
+        else
+        {
+            ll r=0;
             for(i=0;i<n;i++)
             {
                 if(a[i]!=m)

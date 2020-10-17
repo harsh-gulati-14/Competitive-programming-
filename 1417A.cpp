@@ -21,6 +21,30 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n,k;
+        cin>>n>>k;
+        ll a[n];
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        ll p=*min_element(a,a+n);
+        for(i=0;i<n;i++)
+        {
+            if(p==a[i])
+            {
+                j=i;
+                break;
+            }
+        }
+        ll sum=0;
+        for(i=0;i<n;i++)
+        {
+            if(i!=j)
+            {
+                sum=sum+((k-a[i])/p);
+            }
+        }
+        cout<<sum<<"\n";
     }
 }

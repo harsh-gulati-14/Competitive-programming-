@@ -11,16 +11,30 @@ typedef long long int ll;
 #define ma map<int,int> 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
     #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-     ll i,j,k,l,m,t;
+    ll i,j,k,l,m,t;
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        double p,q;
+        cin>>p>>q;
+        p=ceil(p/9);
+        q=ceil(q/9);
+        if(p==q)
+        {
+            cout<<1<<" "<<p<<endl;
+        }
+        else{
+            if(p>q)
+            {
+                cout<<1<<" "<<q<<endl;
+            }
+            else{
+                cout<<0<<" "<<p<<endl;
+            }
+        }
     }
 }

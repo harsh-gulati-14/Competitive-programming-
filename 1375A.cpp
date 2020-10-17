@@ -1,5 +1,6 @@
 #include<iostream>
 #include<map>
+#include <bits/stdc++.h>
 #include<vector>
 #include<algorithm>
 #include<math.h>
@@ -14,9 +15,9 @@ int main()
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-    ll i,j,k,l,m;
-    cin>>m;
-    while(m--)
+    ll i,j,k,l,m,t;
+    cin>>t;
+    while(t--)
     {
         ll n;
         cin>>n;
@@ -25,17 +26,23 @@ int main()
         {
             cin>>a[i];
         }
-        ll p=n-1;
-        while(p>0 && a[p]<=a[p-1])
+        for(i=1;i<n;i+=2)
         {
-            p--;
-            // to get the suffix increasing from  back
+            if((a[i]-a[i-1]<0 && a[i+1]-a[i]<0) || (a[i]-a[i-1]>0 && a[i+1]-a[i]>0))
+            {
+                if(a[i]>0)
+                {
+                    a[i]=-a[i];
+                }
+                else{
+                    a[i]=+a[i];
+                }
+            }
         }
-        while(p>0 && a[p]>=a[p-1])
+        for(i=0;i<n;i++)
         {
-            p--;
-            // after the point it reached th emax start dec
+            cout<<a[i]<<" ";
         }
-        cout<<p<<"\n";
+        cout<<'\n';
     }
 }

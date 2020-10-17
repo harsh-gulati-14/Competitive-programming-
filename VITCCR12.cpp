@@ -21,6 +21,16 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n,k;
+        cin>>n>>k;
+        vec v;
+        for(i=1;i<=n*k;i++)
+        {
+            if(i%n!=0)
+            {
+                v.pb(i);
+            }
+        }
+        cout<<v[k-1]<<"\n";
     }
 }

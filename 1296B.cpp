@@ -21,6 +21,16 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        cin>>n;
+        k=n;
+        ll s=0;
+        while(k>0)
+        {
+            ll d=k%10;
+            s+=(k-d);
+            k=(k-d)/10+d;
+        }
+        cout<<s<<endl;
     }
 }

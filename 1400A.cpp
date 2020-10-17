@@ -21,6 +21,14 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        cin>>n;
+        string s;
+        cin>>s;
+        for(i=0;i<2*n;i+=2)
+        {
+            cout<<s[i];
+        }
+        cout<<"\n";
     }
 }

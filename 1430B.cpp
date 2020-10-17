@@ -21,6 +21,18 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n,k;
+        cin>>n>>k;
+        ll a[n];
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        sort(a,a+n,greater<ll> ());
+        for(i=0;i<k;i++)
+        {
+            a[0]+=a[i+1];
+        }
+        cout<<a[0]<<"\n";
     }
 }

@@ -15,12 +15,25 @@ int main()
     cin.tie(NULL);
     #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
-    freopen("output.txt","w",stdout);
+    // freopen("output.txt","w",stdout);
     #endif
      ll i,j,k,l,m,t;
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll x,y,k;
+        cin>>x>>y>>k;
+        ll s=0,u=0;
+        u=y*k;
+        u+=k;
+        ll n=0;
+        while(s<=u)
+        {
+            s+=x;
+            s--;
+            n++;
+        }
+        n+=y;
+        cout<<n<<"\n";
     }
 }

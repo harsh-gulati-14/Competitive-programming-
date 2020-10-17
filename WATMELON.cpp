@@ -21,6 +21,28 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        cin>>n;
+        ll a[n];
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        ll f=0;
+        for(i=0;i<n;i++)
+        {
+            if(a[i]!=i+1 && a[i]!=0)
+            {
+                f=1;
+                break;
+            }
+        }
+        if(f==1)
+        {
+            cout<<"NO"<<"\n";
+        }
+        else{
+            cout<<"YES"<<"\n";
+        }
     }
 }

@@ -17,10 +17,30 @@ int main()
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-     ll i,j,k,l,m,t;
+    ll i,j,k,l,m,t;
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n,k;
+        cin>>n>>k;
+        if(k==0)
+        {
+            if(n&1)
+            {
+                cout<<1<<"\n";
+            }
+            else
+            {
+                cout<<0<<"\n";
+            }
+        }
+        else if(n>=k)
+        {
+            cout<<n-k<<"\n";
+        }
+        else if(k>n)
+        {
+            cout<<k-n<<"\n";
+        }
     }
 }

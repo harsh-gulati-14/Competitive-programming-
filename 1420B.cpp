@@ -21,6 +21,24 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        cin>>n;
+        ll a[n];
+        ll c=0;
+        for(i=0;i<n;i++)cin>>a[i];
+        for(i=0;i<n;i++)
+        {
+            for(j=i+1;j<n;j++)
+            {
+                ll p=a[i]&a[j];
+                ll q=a[i]^a[j];
+                if(p>=q)
+                {
+                    c++;
+                }
+            }
+        }
+        cout<<c<<"\n";
+
     }
 }

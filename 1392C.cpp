@@ -21,6 +21,18 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        cin>>n;
+        ll a[n]        ;
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        ll sum=0,r=0,c=0;    
+        for(i=1;i<n;i++)
+        {
+           sum+=max((a[i-1]-a[i]),(ll)0);
+        }
+        cout<<sum<<"\n";
     }
 }

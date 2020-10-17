@@ -21,6 +21,23 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        cin>>n;
+        k=ceil(log(n));
+        j=1;
+        ll a[k+1];
+        a[0]=1;
+        for(i=0;i<k;i++)
+        {
+            a[i]=(j*(j+1))/2;
+            j+=2;
+        }
+        ll sum=0;
+        for(i=0;i<k;i++)
+        {
+            cout<<a[i]<<" ";
+            sum+=a[i];
+        }
+        cout<<'\n';
     }
 }

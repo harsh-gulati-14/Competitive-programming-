@@ -21,6 +21,27 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        ll n;
+        set<ll> s;
+        cin>>n;
+        for(i=0;i<n;i++)
+        {
+            cin>>k;
+            s.insert(k);
+        }
+        vec v;
+        for(auto x:s)
+        {
+            v.pb(x);
+        }
+        ll f=0;
+        if(v[0]==0)
+        {
+            f=1;
+        }
+        if(f)
+        cout<<s.size()-1<<"\n";
+        else
+        cout<<s.size()<<"\n";
     }
 }

@@ -21,6 +21,17 @@ int main()
     cin>>t;
     while(t--)
     {
-        cout<<1;
+        double x,y,dif;
+        cin>>x>>y;
+        if(x>y)
+        {
+            dif=x-y;
+        }
+        else{
+            dif=y-x;
+        }
+        dif=dif/10;
+        dif=ceil(dif);
+        cout<<(ll)dif<<"\n";
     }
 }

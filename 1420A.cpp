@@ -1,5 +1,6 @@
 #include<iostream>
 #include<map>
+#include <bits/stdc++.h>
 #include<vector>
 #include<algorithm>
 #include<math.h>
@@ -10,13 +11,15 @@ typedef long long int ll;
 #define ma map<int,int> 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     #ifndef ONLINE_JUDGE
     freopen("input.txt","r",stdin);
     freopen("output.txt","w",stdout);
     #endif
-    ll i,j,k,l,m;
-    cin>>m;
-    while(m--)
+     ll i,j,k,l,m,t;
+    cin>>t;
+    while(t--)
     {
         ll n;
         cin>>n;
@@ -25,17 +28,25 @@ int main()
         {
             cin>>a[i];
         }
-        ll p=n-1;
-        while(p>0 && a[p]<=a[p-1])
+        ll c=0;
+        for(i=0;i<n-1;i++)
         {
-            p--;
-            // to get the suffix increasing from  back
+            for(j=i+1;j<n;j++)
+            {
+                if(a[i]>a[j])   
+                {
+                    c++;
+                }
+            }
         }
-        while(p>0 && a[p]>=a[p-1])
+        ll p=((n*(n-1))/2)-1;
+        if(c<=p)
         {
-            p--;
-            // after the point it reached th emax start dec
+            cout<<"YES"<<"\n";
         }
-        cout<<p<<"\n";
+        else{
+            cout<<"NO"<<"\n";   
+        }
+        
     }
 }
